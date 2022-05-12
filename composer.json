@@ -1,0 +1,38 @@
+{
+    "name": "tonysapay/laravel-upay-payment",
+    "description": "Integration with UPay payment System",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Tonysapay\\Upay\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tonysapay\\Upay\\Tests\\": "tests/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Tony Sapay",
+            "email": "tony.sapay@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.2"
+    },
+    "require-dev": {
+      "orchestra/testbench": "^5|^6|^7"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "TonySapay\\Upay\\ServiceProvider"
+            ],
+            "aliases": {
+                "UPay": "TonySapay\\Upay\\Facade\\Upay"
+            }
+        }
+    }
+}
